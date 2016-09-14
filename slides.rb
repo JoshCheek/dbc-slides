@@ -79,4 +79,57 @@ everything is an investment
 so invest wisely
 ---
 Breadth first > depth first
+---
+You will fail n times before you succeed
 
+Assume n is 10
+---
+Sans Serif fonts > Serif fonts
+---
+Steal a colour scheme
+
+(or generate one)
+---
+Increase line spacing
+---
+Increase font size
+---
+Increase whitespace
+---
+Manipulate your environment
+---
+Learn to say "I'm wrong"
+
+(without saying "sorry")
+---
+Start with an MVP
+---
+Cost is exponential
+
+So abandon things that
+have already taken too long
+---
+Do something nice for someone
+
+Without anyone knowing it was you
+(aka: how to make yourself appreciative)
+---
+Quickly address issues
+
+Otherwise they become the norm
+and you become persistently frustrated
+---
+Say "no"
+---
+Say "yes"
+---
+Turn off notifications
+---
+When you're too miserable to feel
+
+behave as if you weren't
+because your behaviour still matters
+and this way you can do the effective
+thing, even though you don't feel it
+---
+Share ute cat and dog pics
