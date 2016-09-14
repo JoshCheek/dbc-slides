@@ -1,10 +1,16 @@
 require 'io/console'
 
-slides = DATA.read.split "---\n"
+slides = DATA.read.split "\n---\n"
 
 define_method :show_slide do |index|
   y, x = $stdout.winsize
-  slide      = slides[index].gsub(/^/, '    ')
+  first, *rest = slides[index].lines.map(&:chomp)
+  first = "  \e[92m#{first.capitalize}\e[0m"
+  rest.each do |line|
+    line.gsub! /^/, "    \e[33m"
+    line << "\e[0m"
+  end
+  slide      = [first, *rest].join("\r\n")
   clear      = "\e[H\e[2J"
   bottom_row = "\e[#{y};1H"
   progress   = "#{index+1}/#{slides.length}"
@@ -29,6 +35,48 @@ $stdin.raw do
 end
 
 __END__
-abc def
+friends > networking
 ---
-ghi jkl
+Imposter syndrome < "fuck it"
+---
+No one is rational, attend to aesthetics
+---
+Fuck your pride
+
+(put everything on git)
+---
+Get over your pride, you're right for th job.
+
+(If you were going to be qualfied,
+you wouldn't be programming.)
+---
+half > half assed
+---
+practice katas
+---
+deliberately practice your tools
+---
+empower and appreciate youru team
+---
+build mini versions of the tools youuse
+---
+less is more
+
+(eg shorter blogs)
+---
+visual > verbal
+---
+be interested and curious
+
+* about jobs you apply to
+* people you meet
+* libs you try
+* code you write
+* ...
+---
+everything is an investment
+
+so invest wisely
+---
+Breadth first > depth first
+
