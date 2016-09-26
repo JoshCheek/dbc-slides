@@ -1,8 +1,6 @@
 require 'io/console'
 
-slides = DATA.read.split "\n---\n"
-
-define_method :show_slide do |index|
+def show_slide(slides, index)
   y, x = $stdout.winsize
   first, *rest = slides[index].lines.map(&:chomp)
   first = "  \e[92m#{first.capitalize}\e[0m"
@@ -20,10 +18,12 @@ end
 print "\e[?25l"
 at_exit { print "\e[?25h" }
 
+slides = DATA.read.split "\n---\n"
+
 $stdin.raw do
   i = ARGV[0].to_i
   loop do
-    print show_slide(i)
+    print show_slide(slides, i)
     case $stdin.getc
     when 'h'               then i -= 1
     when 'l'               then i += 1
